@@ -1,0 +1,183 @@
+import { motion } from "motion/react";
+
+function Projects() {
+  const projects = [
+    {
+      number: "01",
+      title: "Expense Tracker",
+      description:
+        "A web application for tracking expenses and managing personal finances.",
+        tech: ["React", "TypeScript", "CSS"],
+      link: "https://expence-traker-app-rust.vercel.app/",
+    },
+
+    {
+      number: "02",
+      title: "To-Do App",
+      description:
+        "A simple and responsive task management application for organizing daily activities.",
+      tech: ["React", "TypeScript", "CSS"],
+      link: "https://to-do-app-livid-eta.vercel.app/",
+    },
+    {
+      number: "03",
+      title: "E-Commerce Wine Store",
+      description:
+        "A modern e-commerce interface for browsing and purchasing wine products.",
+        tech: ["React", "TypeScript", "CSS"],
+      link: "https://019f3d38-985c-7685-8919-a41cc4c6ce6e.arena.site/",
+    },
+    {
+      number: "04",
+      title: "Weather App",
+      description:
+        "A responsive weather application that presents weather information in a clean interface.",
+        tech: ["React", "TypeScript", "CSS"],
+      link: "https://weather-app-project-eight-vert.vercel.app/",
+    },
+
+    
+
+    {
+      number: "05",
+      title: "Markdown Preview App",
+      description:
+      "A real-time Markdown editor built with Vue, JavaScript, and TypeScript, allowing users to write and preview formatted content instantly.",
+      tech: ["Vue", "JavaScript", "TypeScript"],
+      link:"https://markdown-vue-js-ts-assessment-8fef.vercel.app/",
+    },
+
+
+    
+    {
+      number: "06",
+      title: "Blog Web Application",
+      description:
+      "A modern blog platform with structured content layout, responsive design, and clean user interface for reading and navigating articles.",
+      tech: ["HTML", "CSS", "JavaScript"],
+      link:"https://blog-app-beta-peach.vercel.app/",
+    },
+
+    {
+      number: "07",
+      title: "QuickServe Web App",
+      description: "A modern service-based web application designed to provide fast and seamless user interactions. Built with modern frontend tools and deployed on Vercel.",
+
+      tech: ["React", "TypeScript", "Tailwind CSS"],
+    
+      link: "https://quickserve-wzr9.vercel.app/",
+      
+    },
+
+  ];
+
+  return (
+    <section
+      id="projects"
+      aria-labelledby="projects-title"
+      className="relative overflow-hidden bg-[#050505] px-6 py-32 text-white sm:px-10 lg:px-20"
+    >
+      {/* Background glow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute right-[-150px] top-1/3 h-[450px] w-[450px] rounded-full bg-purple-600/10 blur-[130px]"
+      />
+
+      <div className="relative z-10 mx-auto max-w-7xl">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <p className="mb-6 text-sm uppercase tracking-[0.4em] text-purple-300/60">
+            Selected Work
+          </p>
+
+          <h2
+            id="projects-title"
+            className="max-w-5xl text-4xl font-bold leading-[1.05] tracking-[-0.04em] sm:text-5xl lg:text-7xl"
+          >
+            Things I have built
+            <br />
+            <span className="text-white/30">and learned from.</span>
+          </h2>
+
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-white/50 sm:text-lg">
+            A selection of projects where I have applied frontend
+            technologies to solve problems, experiment with ideas and build
+            useful digital experiences.
+          </p>
+        </motion.div>
+
+        {/* Projects */}
+        <div className="mt-16 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 md:grid-cols-2">
+          {projects.map((project, index) => (
+            <motion.a
+              key={project.title}
+              href={project.link}
+              target="_blank"
+              rel="noreferrer"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.7,
+                delay: index * 0.1,
+              }}
+              className="group relative min-h-[360px] overflow-hidden bg-[#080808] p-8 transition-all duration-500 hover:bg-white/[0.06] sm:p-10"
+            >
+              {/* Project number */}
+              <div className="flex items-center justify-between">
+                <span className="text-xs tracking-[0.3em] text-white/20 transition-colors duration-300 group-hover:text-purple-300/60">
+                  {project.number}
+                </span>
+
+                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/30 transition-all duration-300 group-hover:border-white/30 group-hover:text-white">
+                  ↗
+                </span>
+              </div>
+
+              {/* Project content */}
+              <div className="absolute bottom-10 left-8 right-8 sm:left-10 sm:right-10">
+                <h3 className="text-2xl font-semibold tracking-tight text-white/90 transition-transform duration-500 group-hover:translate-x-2 sm:text-3xl">
+                  {project.title}
+                </h3>
+
+                <p className="mt-4 max-w-lg text-sm leading-relaxed text-white/40 transition-colors duration-300 group-hover:text-white/60 sm:text-base">
+                  {project.description}
+                </p>
+
+                <div className="mt-6 flex items-center justify-between gap-4">
+                  <p className="text-xs uppercase tracking-[0.15em] text-white/25">
+                  {project.tech.join(" • ")}
+                  </p>
+
+                  <span className="h-px w-0 bg-white/40 transition-all duration-500 group-hover:w-16" />
+                </div>
+              </div>
+
+              {/* Hover corner */}
+              <div className="absolute bottom-0 right-0 h-20 w-20 translate-x-10 translate-y-10 rounded-full border border-white/10 transition-transform duration-500 group-hover:translate-x-6 group-hover:translate-y-6" />
+              </motion.a>
+          ))}
+        </div>
+
+        {/* Bottom statement */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="mt-12 flex items-center gap-4 text-sm text-white/30"
+        >
+          <span className="h-px w-12 bg-white/10" />
+          More projects coming soon.
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+export default Projects;
