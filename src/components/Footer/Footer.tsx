@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
 function Footer() {
   return (
@@ -25,46 +26,76 @@ function Footer() {
             </p>
           </div>
 
-          {/* Navigation */}
-          <nav
-            aria-label="Footer navigation"
-            className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/40"
-          >
-            <a
-              href="#about"
-              className="transition-colors hover:text-white"
+          {/* Social Links & Navigation */}
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
+            <nav
+              aria-label="Footer navigation"
+              className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/40"
             >
-              About
-            </a>
+              <a
+                href="#about"
+                className="transition-colors hover:text-white"
+              >
+                About
+              </a>
 
-            <a
-              href="#skills"
-              className="transition-colors hover:text-white"
-            >
-              Skills
-            </a>
+              <a
+                href="#skills"
+                className="transition-colors hover:text-white"
+              >
+                Skills
+              </a>
 
-            <a
-              href="#projects"
-              className="transition-colors hover:text-white"
-            >
-              Projects
-            </a>
+              <a
+                href="#projects"
+                className="transition-colors hover:text-white"
+              >
+                Projects
+              </a>
 
-            <a
-              href="#experience"
-              className="transition-colors hover:text-white"
-            >
-              Experience
-            </a>
+              <a
+                href="#experience"
+                className="transition-colors hover:text-white"
+              >
+                Experience
+              </a>
 
-            <a
-              href="#contact"
-              className="transition-colors hover:text-white"
-            >
-              Contact
-            </a>
-          </nav>
+              <a
+                href="#contact"
+                className="transition-colors hover:text-white"
+              >
+                Contact
+              </a>
+            </nav>
+
+            <div className="flex items-center gap-3 text-white/50">
+              <a
+                href="https://github.com/KINGS-HEART"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub Profile"
+                className="rounded-full border border-white/10 p-2 transition-colors hover:border-white/30 hover:text-white"
+              >
+                <FiGithub size={16} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/kingsley-ebuka-dunu-a67102230/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn Profile"
+                className="rounded-full border border-white/10 p-2 transition-colors hover:border-white/30 hover:text-white"
+              >
+                <FiLinkedin size={16} />
+              </a>
+              <a
+                href="mailto:kingsleydunu@gmail.com"
+                aria-label="Send Email"
+                className="rounded-full border border-white/10 p-2 transition-colors hover:border-white/30 hover:text-white"
+              >
+                <FiMail size={16} />
+              </a>
+            </div>
+          </div>
         </motion.div>
 
         {/* Bottom */}
