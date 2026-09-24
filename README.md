@@ -1,75 +1,254 @@
-# React + TypeScript + Vite
+# DEK — Frontend Engineering Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio built to showcase my work, technical skills, frontend engineering experience, and ongoing growth as a software developer.
 
-Currently, two official plugins are available:
+**Live Portfolio:** [Add your deployed Vercel URL here]
+**GitHub:** https://github.com/KINGS-HEART
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 👋 About Me
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Hi, I'm **Ebuka Kingsley**, a Frontend Engineer passionate about building responsive, accessible, and user-focused web applications.
 
-## Expanding the ESLint configuration
+My frontend journey has taken me from building foundational HTML and CSS projects to developing modern applications with JavaScript, TypeScript, React, Vue, and other frontend technologies.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This portfolio brings together my projects, technical skills, experience, and development journey in one place.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 What This Portfolio Includes
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* Responsive personal portfolio
+* Hero and introduction section
+* About section
+* Technical skills
+* Professional experience
+* Featured projects
+* Statistics and development highlights
+* Contact section
+* Smooth scrolling and interactive UI
+* Responsive navigation
+* Modern animations and visual effects
+* Mobile, tablet, and desktop layouts
 
+---
+
+## 🛠️ Technologies
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript (ES6+)
+* TypeScript
+* React
+* JSX / TSX
+* Tailwind CSS
+
+### Libraries & Tools
+
+* Vite
+* Framer Motion
+* Three.js
+* React Three Fiber
+* React Three Drei
+* Lenis
+* ESLint
+* Git
+* GitHub
+
+### Development
+
+* Responsive Web Design
+* Component-Based Architecture
+* REST API Integration
+* State Management
+* Version Control
+* UI Implementation
+* Performance Optimization
+* Cross-Browser Development
+
+---
+
+## 📂 Featured Projects
+
+### QuickServe
+
+A modern service-based web application designed to provide a fast and seamless user experience.
+
+**Technologies:** Vue.js, TypeScript, Pinia, Vue Router, Paystack, Vite
+
+**Live:** https://quickserve-wzr9.vercel.app/
+
+---
+
+### Markdown Preview App
+
+A markdown editor and preview application that allows users to write Markdown and see the formatted result in real time.
+
+**Technologies:** Vue.js, TypeScript, Vite
+
+**Live:** https://markdown-vue-js-ts-assessment-8fef.vercel.app/
+
+---
+
+### Wine E-Commerce Application
+
+An e-commerce application focused on presenting wine products through a responsive shopping interface.
+
+**Technologies:** JavaScript, HTML, CSS, REST APIs
+
+**Live:** https://e-commerce-on-wines.vercel.app/
+
+---
+
+### Expense Tracker
+
+A frontend application for recording and managing personal expenses through an intuitive user interface.
+
+**Live:** https://expence-traker-app-rust.vercel.app/
+
+---
+
+### Todo Application
+
+A task management application designed for creating, tracking, and managing daily tasks.
+
+**Live:** https://to-do-app-livid-eta.vercel.app/
+
+---
+
+## 🎯 Development Focus
+
+I'm currently focused on strengthening my skills in:
+
+* Advanced JavaScript
+* TypeScript
+* React and modern frontend architecture
+* Vue.js
+* Responsive UI development
+* API integration
+* Testing and quality assurance
+* Clean and maintainable code
+* Performance optimization
+* Accessibility
+* Modern frontend engineering practices
+
+---
+
+## 📈 My Approach
+
+I believe good frontend engineering goes beyond making a page look good.
+
+My development process focuses on:
+
+1. Understanding the problem
+2. Planning the user experience
+3. Building reusable components
+4. Writing maintainable code
+5. Testing functionality
+6. Optimizing performance
+7. Ensuring responsive behavior
+8. Deploying and continuously improving the application
+
+---
+
+## 🎓 Background
+
+I studied **Physics Electronics** and later transitioned into software development through structured frontend engineering training.
+
+My transition into technology has strengthened my problem-solving skills and given me the opportunity to combine analytical thinking with creativity and user-focused development.
+
+---
+
+## 🌍 Career Goal
+
+I'm interested in frontend engineering opportunities where I can contribute to meaningful products, collaborate with experienced developers, solve real-world problems, and continue growing as an engineer.
+
+I'm particularly interested in **remote and international frontend opportunities**.
+
+---
+
+## 📬 Contact
+
+**Email:** [kingsleydunu@gmail.com](mailto:kingsleydunu@gmail.com)
+
+**GitHub:**
+https://github.com/KINGS-HEART
+
+**LinkedIn:**
+https://www.linkedin.com/in/kingsley-ebuka-dunu-a67102230/
+
+---
+
+## ⚙️ Run Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/KINGS-HEART/Newest-DEK-port-folio.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Navigate into the project:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+cd Newest-DEK-port-folio
 ```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Build the project:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+---
+
+## 📁 Project Structure
+
+```text
+src/
+├── components/
+│   ├── About/
+│   ├── Blog/
+│   ├── Contact/
+│   ├── Experience/
+│   ├── Footer/
+│   ├── Hero/
+│   ├── Layout/
+│   ├── Projects/
+│   ├── Skills/
+│   ├── Stats/
+│   ├── Three/
+│   └── ui/
+│
+├── App.tsx
+├── main.tsx
+└── vite-env.d.ts
+```
+
+---
+
+## 📄 License
+
+This project is intended to serve as my personal portfolio and showcase my frontend engineering work.
+
+© 2026 **Ebuka Kingsley**
