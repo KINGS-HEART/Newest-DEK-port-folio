@@ -14,7 +14,7 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <main id="main-content">
+    <main id="main-content" className="bg-futuristic-grid relative min-h-screen bg-[#030308] text-white selection:bg-purple-500 selection:text-white">
       <Navbar />
       <SmoothScroll />
       <CustomCursor />
@@ -37,7 +37,6 @@ function App() {
         <Contact />
       </SectionReveal>
       <Footer />
-      
     </main>
   );
 }

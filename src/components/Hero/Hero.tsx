@@ -8,23 +8,37 @@ function Hero() {
     <section
       id="home"
       aria-labelledby="hero-title"
-      className="relative flex min-h-screen items-center overflow-hidden bg-[#050505] px-6 pt-20 text-white sm:px-10 lg:px-20"
+      className="relative flex min-h-screen items-center overflow-hidden bg-[#030308] px-6 pt-20 text-white sm:px-10 lg:px-20"
     >
       {/* 3D Background */}
       <Suspense fallback={null}>
-  <HeroCanvas />
-</Suspense>
+        <HeroCanvas />
+      </Suspense>
 
-      {/* Background glow */}
+      {/* Dual glowing atmosphere (purple & blue) */}
       <motion.div
         aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[450px] w-[450px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-600/20 blur-[120px] sm:h-[600px] sm:w-[600px]"
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-600/15 blur-[140px] sm:h-[700px] sm:w-[700px]"
         animate={{
           scale: [1, 1.15, 1],
-          opacity: [0.35, 0.65, 0.35],
+          opacity: [0.3, 0.55, 0.3],
         }}
         transition={{
-          duration: 6,
+          duration: 7,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+
+      <motion.div
+        aria-hidden="true"
+        className="pointer-events-none absolute right-1/4 top-1/3 h-[400px] w-[400px] rounded-full bg-sky-500/10 blur-[130px] sm:h-[550px] sm:w-[550px]"
+        animate={{
+          scale: [1.1, 1, 1.1],
+          opacity: [0.25, 0.45, 0.25],
+        }}
+        transition={{
+          duration: 8,
           repeat: Infinity,
           ease: "easeInOut",
         }}
@@ -33,14 +47,17 @@ function Hero() {
       {/* Hero Content */}
       <div className="relative z-10 mx-auto w-full max-w-7xl">
         
-        {/* Availability */}
+        {/* Availability Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="mb-6 flex items-center gap-3"
         >
-          <span className="h-2 w-2 rounded-full bg-green-400 shadow-[0_0_12px_rgba(74,222,128,0.8)]" />
+          <span className="relative flex h-2.5 w-2.5">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
+          </span>
 
           <p className="text-xs uppercase tracking-[0.3em] text-white/50 sm:text-sm">
             Available for opportunities
@@ -52,7 +69,7 @@ function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="mb-5 text-sm font-medium uppercase tracking-[0.4em] text-purple-300/70"
+          className="mb-5 text-sm font-medium uppercase tracking-[0.4em] text-purple-300/80"
         >
           Frontend Engineer
         </motion.p>
@@ -84,11 +101,11 @@ function Hero() {
             duration: 0.8,
             delay: 0.5,
           }}
-          className="mt-10 max-w-2xl text-base leading-relaxed text-white/55 sm:text-lg"
+          className="mt-10 max-w-2xl text-base leading-relaxed text-white/60 sm:text-lg"
         >
           I design and build modern digital experiences that combine
           thoughtful interfaces, smooth interactions and scalable frontend
-          architecture using JavaScript, TypeScript and React.
+          architecture using JavaScript, TypeScript, React and Vue.
         </motion.p>
 
         {/* Buttons */}
@@ -103,14 +120,14 @@ function Hero() {
         >
           <a
             href="#projects"
-            className="rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-black transition-all duration-300 hover:scale-105 hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#050505]"
+            className="rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-black transition-all duration-300 hover:scale-105 hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#030308]"
           >
             View My Work →
           </a>
 
           <a
             href="#contact"
-            className="rounded-full border border-white/20 px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:border-white/50 hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#050505]"
+            className="rounded-full border border-white/20 px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:border-white/50 hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#030308]"
           >
             Let's Talk
           </a>
