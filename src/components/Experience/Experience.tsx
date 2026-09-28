@@ -28,6 +28,13 @@ function Experience() {
       aria-labelledby="experience-title"
       className="relative overflow-hidden bg-[#0a0a0a] px-6 py-32 text-white sm:px-10 lg:px-20"
     >
+      {/* Background Image Overlay */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20 mix-blend-screen"
+        style={{ backgroundImage: `url('/image/Background/bg-experience.webp')` }}
+      />
+
       {/* Background glow */}
       <div
         aria-hidden="true"
@@ -96,7 +103,7 @@ function Experience() {
                 </div>
 
                 {/* Experience content */}
-                <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-7 transition-all duration-500 hover:border-white/20 hover:bg-white/[0.06] sm:p-9">
+                <div className="rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-7 transition-all duration-500 hover:border-white/20 hover:bg-white/[0.06] sm:p-9">
                   <div className="flex flex-wrap items-start justify-between gap-4">
                     <h3 className="text-2xl font-semibold tracking-tight text-white/90 sm:text-3xl">
                       {experience.role}

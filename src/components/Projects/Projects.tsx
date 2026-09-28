@@ -92,6 +92,13 @@ function Projects() {
       aria-labelledby="projects-title"
       className="relative overflow-hidden bg-[#050505] px-6 py-32 text-white sm:px-10 lg:px-20"
     >
+      {/* Background Image Overlay */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20 mix-blend-screen"
+        style={{ backgroundImage: `url('/image/Background/bg-projects.webp')` }}
+      />
+
       {/* Background glow */}
       <div
         aria-hidden="true"
@@ -167,7 +174,7 @@ function Projects() {
                 href={project.link}
                 target="_blank"
                 rel="noreferrer"
-                className="group relative flex min-h-[360px] flex-col justify-between overflow-hidden bg-[#080808] p-8 transition-all duration-500 hover:bg-white/[0.06] sm:p-10"
+                className="group relative flex min-h-[360px] flex-col justify-between overflow-hidden bg-[#080808]/90 backdrop-blur-sm p-8 transition-all duration-500 hover:bg-white/[0.06] sm:p-10"
               >
                 {/* Project number & arrow */}
                 <div className="flex items-center justify-between">

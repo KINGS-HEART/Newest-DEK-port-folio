@@ -10,6 +10,13 @@ function Hero() {
       aria-labelledby="hero-title"
       className="relative flex min-h-screen items-center overflow-hidden bg-[#030308] px-6 pt-20 text-white sm:px-10 lg:px-20"
     >
+      {/* Hero Section Background Image */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat opacity-25 mix-blend-screen"
+        style={{ backgroundImage: `url('/image/Background/bg-hero.webp')` }}
+      />
+
       {/* 3D Background */}
       <Suspense fallback={null}>
         <HeroCanvas />
