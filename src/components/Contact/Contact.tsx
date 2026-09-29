@@ -19,7 +19,6 @@ function Contact() {
 
     setStatus("submitting");
 
-    // Simulate sending message or preparing mailto link
     setTimeout(() => {
       setStatus("success");
       const mailtoLink = `mailto:kingsleydunu@gmail.com?subject=${encodeURIComponent(
@@ -38,6 +37,13 @@ function Contact() {
       aria-labelledby="contact-title"
       className="relative overflow-hidden bg-[#0a0a0a] px-6 py-32 text-white sm:px-10 lg:px-20"
     >
+      {/* Background Image Overlay */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20 mix-blend-screen"
+        style={{ backgroundImage: `url('/image/Background/bg-contact.webp')` }}
+      />
+
       {/* Background glow */}
       <div
         aria-hidden="true"
@@ -88,7 +94,7 @@ function Contact() {
             <div className="mt-10 space-y-6">
               <a
                 href="mailto:kingsleydunu@gmail.com"
-                className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-all duration-300 hover:border-purple-500/50 hover:bg-white/[0.06]"
+                className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-5 transition-all duration-300 hover:border-purple-500/50 hover:bg-white/[0.06]"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-purple-300 transition-colors group-hover:bg-purple-500/20">
                   <FiMail className="text-xl" />
@@ -105,7 +111,7 @@ function Contact() {
                 href="https://github.com/KINGS-HEART"
                 target="_blank"
                 rel="noreferrer"
-                className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-all duration-300 hover:border-purple-500/50 hover:bg-white/[0.06]"
+                className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-5 transition-all duration-300 hover:border-purple-500/50 hover:bg-white/[0.06]"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-purple-300 transition-colors group-hover:bg-purple-500/20">
                   <FiGithub className="text-xl" />
@@ -122,7 +128,7 @@ function Contact() {
                 href="https://www.linkedin.com/in/kingsley-ebuka-dunu-a67102230/"
                 target="_blank"
                 rel="noreferrer"
-                className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-all duration-300 hover:border-purple-500/50 hover:bg-white/[0.06]"
+                className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-5 transition-all duration-300 hover:border-purple-500/50 hover:bg-white/[0.06]"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-purple-300 transition-colors group-hover:bg-purple-500/20">
                   <FiLinkedin className="text-xl" />
@@ -143,7 +149,7 @@ function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 sm:p-10"
+            className="rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-8 sm:p-10"
           >
             {status === "success" ? (
               <div className="py-12 text-center">
