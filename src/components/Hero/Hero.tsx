@@ -14,7 +14,7 @@ function Hero() {
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat opacity-25 mix-blend-screen"
-        style={{ backgroundImage: `url('/image/Background/bg-hero.webp')` }}
+        style={{ backgroundImage: `url('/image/Background/bg-hero.svg')` }}
       />
 
       {/* 3D Background */}

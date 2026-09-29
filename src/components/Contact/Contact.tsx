@@ -41,7 +41,7 @@ function Contact() {
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20 mix-blend-screen"
-        style={{ backgroundImage: `url('/image/Background/bg-contact.webp')` }}
+        style={{ backgroundImage: `url('/image/Background/bg-contact.svg')` }}
       />
 
       {/* Background glow */}
