@@ -7,6 +7,8 @@ interface Project {
   description: string;
   tech: string[];
   link: string;
+  secondaryLink?: string;
+  secondaryLinkLabel?: string;
   category: "React" | "Vue" | "JavaScript";
 }
 
@@ -48,6 +50,8 @@ function Projects() {
         "A modern e-commerce interface for browsing and purchasing wine products.",
       tech: ["JavaScript", "HTML5", "CSS3", "REST APIs"],
       link: "https://e-commerce-on-wines.vercel.app/",
+      secondaryLink: "https://019f3d38-985c-7685-8919-a41cc4c6ce6e.arena.site/",
+      secondaryLinkLabel: "Arena Site",
       category: "JavaScript",
     },
     {
@@ -164,34 +168,57 @@ function Projects() {
         >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project, index) => (
-              <motion.a
+              <motion.div
                 key={project.title}
                 layout
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                href={project.link}
-                target="_blank"
-                rel="noreferrer"
                 className="group relative flex min-h-[360px] flex-col justify-between overflow-hidden bg-[#080808]/90 backdrop-blur-sm p-8 transition-all duration-500 hover:bg-white/[0.06] sm:p-10"
               >
-                {/* Project number & arrow */}
+                {/* Project number & links */}
                 <div className="flex items-center justify-between">
                   <span className="text-xs tracking-[0.3em] text-white/20 transition-colors duration-300 group-hover:text-purple-300/60">
                     {project.number}
                   </span>
 
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/30 transition-all duration-300 group-hover:border-white/30 group-hover:text-white">
-                    ↗
-                  </span>
+                  <div className="flex items-center gap-2">
+                    {project.secondaryLink && (
+                      <a
+                        href={project.secondaryLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/50 transition-colors hover:border-purple-400 hover:text-white"
+                      >
+                        {project.secondaryLinkLabel || "Secondary"} ↗
+                      </a>
+                    )}
+
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Visit ${project.title}`}
+                      className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/30 transition-all duration-300 group-hover:border-white/30 group-hover:text-white"
+                    >
+                      ↗
+                    </a>
+                  </div>
                 </div>
 
                 {/* Project content */}
                 <div className="mt-10">
-                  <h3 className="text-2xl font-semibold tracking-tight text-white/90 transition-transform duration-500 group-hover:translate-x-2 sm:text-3xl">
-                    {project.title}
-                  </h3>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block"
+                  >
+                    <h3 className="text-2xl font-semibold tracking-tight text-white/90 transition-transform duration-500 group-hover:translate-x-2 sm:text-3xl">
+                      {project.title}
+                    </h3>
+                  </a>
 
                   <p className="mt-4 max-w-lg text-sm leading-relaxed text-white/40 transition-colors duration-300 group-hover:text-white/60 sm:text-base">
                     {project.description}
@@ -208,7 +235,7 @@ function Projects() {
 
                 {/* Hover corner */}
                 <div className="absolute bottom-0 right-0 h-20 w-20 translate-x-10 translate-y-10 rounded-full border border-white/10 transition-transform duration-500 group-hover:translate-x-6 group-hover:translate-y-6" />
-              </motion.a>
+              </motion.div>
             ))}
           </AnimatePresence>
         </motion.div>
