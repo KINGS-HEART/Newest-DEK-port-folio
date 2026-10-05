@@ -9,6 +9,7 @@ import Contact from "./components/Contact/Contact";
 import CustomCursor from "./components/ui/CustomCursor";
 import SmoothScroll from "./components/ui/SmoothScroll";
 import SectionReveal from "./components/ui/SectionReveal";
+import BackToTop from "./components/ui/BackToTop";
 import Navbar from "./components/Layout/Navbar";
 import Footer from "./components/Footer/Footer";
 
@@ -37,6 +38,7 @@ function App() {
         <Contact />
       </SectionReveal>
       <Footer />
+      <BackToTop />
     </main>
   );
 }

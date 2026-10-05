@@ -1,21 +1,66 @@
-import { motion } from "motion/react";
+import { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "motion/react";
+
+interface CounterProps {
+  target: number;
+  suffix?: string;
+}
+
+function Counter({ target, suffix = "" }: CounterProps) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    let start = 0;
+    const duration = 1500; // ms
+    const incrementTime = 30; // ms
+    const steps = duration / incrementTime;
+    const stepValue = target / steps;
+
+    const timer = setInterval(() => {
+      start += stepValue;
+      if (start >= target) {
+        setCount(target);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, incrementTime);
+
+    return () => clearInterval(timer);
+  }, [isInView, target]);
+
+  return (
+    <span ref={ref}>
+      {count}
+      {suffix}
+    </span>
+  );
+}
 
 function Stats() {
   const stats = [
     {
-      value: "10+",
+      numericValue: 10,
+      suffix: "+",
       label: "Projects Built",
     },
     {
-      value: "3+",
+      numericValue: 3,
+      suffix: "+",
       label: "Years Learning & Building",
     },
     {
-      value: "8+",
-      label: "Technologies",
+      numericValue: 12,
+      suffix: "+",
+      label: "Technologies Mastered",
     },
     {
-      value: "100%",
+      numericValue: 100,
+      suffix: "%",
       label: "Passion for Development",
     },
   ];
@@ -78,7 +123,7 @@ function Stats() {
 
               <div className="absolute bottom-8 left-8 right-8">
                 <p className="text-5xl font-bold tracking-[-0.05em] text-white transition-transform duration-500 group-hover:translate-x-2 sm:text-6xl">
-                  {stat.value}
+                  <Counter target={stat.numericValue} suffix={stat.suffix} />
                 </p>
 
                 <p className="mt-4 max-w-[160px] text-sm leading-relaxed text-white/40 transition-colors duration-300 group-hover:text-white/60">
