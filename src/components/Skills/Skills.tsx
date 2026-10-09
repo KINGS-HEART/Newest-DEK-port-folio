@@ -14,109 +14,85 @@ function Skills() {
 
   const skillItems: SkillItem[] = [
     {
-      name: "JavaScript (ES6+)",
-      category: "Languages",
+      name: "React.js & Next.js",
+      category: "Frameworks",
       level: "Advanced",
-      description: "Asynchronous JS, Promises, Event Loop, DOM Manipulation & Modern ES features.",
+      description: "Component architecture, server components, routing, hooks & scalable web app patterns.",
     },
     {
       name: "TypeScript",
       category: "Languages",
-      level: "Proficient",
-      description: "Static typing, interfaces, generics, type narrowing & safe API contracts.",
+      level: "Advanced",
+      description: "Static typing, interfaces, type narrowing, generics & safe API contract definitions.",
     },
     {
-      name: "HTML5 & Semantic Markup",
+      name: "JavaScript (ES6+)",
       category: "Languages",
       level: "Advanced",
-      description: "Accessible DOM structure, SEO optimization & ARIA landmarks.",
+      description: "Asynchronous JS, promises, async/await, DOM manipulation & modern ES features.",
     },
     {
-      name: "CSS3 & Modern Layouts",
+      name: "Zustand State Management",
+      category: "Frameworks",
+      level: "Advanced",
+      description: "Centralized store management, persistent state, atomic actions & clean state flows.",
+    },
+    {
+      name: "HTML5 & CSS3 Architecture",
       category: "Languages",
       level: "Advanced",
-      description: "Flexbox, CSS Grid, animations, variables, custom properties & responsive design.",
+      description: "Semantic DOM, CSS Grid, Flexbox, responsive design & accessible UI patterns.",
     },
     {
-      name: "React.js",
-      category: "Frameworks",
-      level: "Advanced",
-      description: "Component architecture, hooks, custom hooks, context, state management & JSX.",
-    },
-    {
-      name: "Vue.js 3",
-      category: "Frameworks",
-      level: "Proficient",
-      description: "Composition API, reactive refs, computed properties & Vue Router.",
-    },
-    {
-      name: "Tailwind CSS",
-      category: "Frameworks",
-      level: "Advanced",
-      description: "Utility-first styling, responsive design systems, custom configuration & dark mode.",
-    },
-    {
-      name: "Pinia & State Management",
-      category: "Frameworks",
-      level: "Proficient",
-      description: "Centralized application state, store actions, getters & reactive state persistence.",
-    },
-    {
-      name: "Git & GitHub",
-      category: "Tools",
-      level: "Proficient",
-      description: "Branching workflows, pull requests, merge conflict resolution & version control.",
-    },
-    {
-      name: "REST APIs & Fetch/Axios",
+      name: "Paystack & REST APIs",
       category: "Tools",
       level: "Advanced",
-      description: "API integration, asynchronous data fetching, error handling & JSON handling.",
+      description: "Secure payment gateway integration, Postman, fetch/Axios & asynchronous data flows.",
     },
     {
-      name: "Vite & Build Tools",
+      name: "Bootstrap & Styling Systems",
+      category: "Frameworks",
+      level: "Proficient",
+      description: "Utility classes, responsive grid systems, component styling & custom theme architecture.",
+    },
+    {
+      name: "QA & Automated Testing",
+      category: "Practices",
+      level: "Advanced",
+      description: "Playwright, Cypress, manual, functional, regression, sanity & UAT test case execution.",
+    },
+    {
+      name: "Git, GitHub & Vercel",
+      category: "Tools",
+      level: "Advanced",
+      description: "Branching workflows, version control, CI/CD, production deployment & code reviews.",
+    },
+    {
+      name: "Vite & Modern Build Tools",
       category: "Tools",
       level: "Proficient",
       description: "Fast module bundling, asset optimization, dev server configuration & build scripts.",
     },
     {
-      name: "Three.js & WebGL Basics",
-      category: "Tools",
-      level: "Experienced",
-      description: "3D canvas scenes, ambient lighting, particle systems & 3D hero experiences.",
-    },
-    {
-      name: "Responsive Web Design",
+      name: "Component Architecture",
       category: "Practices",
       level: "Advanced",
-      description: "Mobile-first layouts, media queries, flexible grids & cross-device compatibility.",
+      description: "Modular design, reusability, prop typing & clean maintainable code principles.",
     },
     {
-      name: "Performance & Optimization",
-      category: "Practices",
-      level: "Proficient",
-      description: "Lazy loading, code splitting, asset compression & lighthouse audit optimization.",
-    },
-    {
-      name: "Web Accessibility (a11y)",
-      category: "Practices",
-      level: "Proficient",
-      description: "Keyboard navigation, screen reader support, focus states & color contrast compliance.",
-    },
-    {
-      name: "UI/UX Implementation",
+      name: "Performance Optimization",
       category: "Practices",
       level: "Advanced",
-      description: "Translating Figma designs into pixel-perfect, interactive frontend components.",
+      description: "Code splitting, lazy loading, asset optimization, bundle minimization & lighthouse audits.",
     },
   ];
 
   const categories = [
     { id: "All", label: "All Skills", icon: FiCpu },
-    { id: "Languages", label: "Core Languages", icon: FiCode },
+    { id: "Languages", label: "Languages", icon: FiCode },
     { id: "Frameworks", label: "Frameworks & State", icon: FiLayers },
-    { id: "Tools", label: "Tools & Workflow", icon: FiCpu },
-    { id: "Practices", label: "Engineering Practices", icon: FiCheckCircle },
+    { id: "Tools", label: "Tools & APIs", icon: FiCpu },
+    { id: "Practices", label: "QA & Practices", icon: FiCheckCircle },
   ];
 
   const filteredSkills =
@@ -139,22 +115,20 @@ function Skills() {
           transition={{ duration: 0.8 }}
         >
           <p className="mb-6 text-sm uppercase tracking-[0.4em] text-purple-300/60">
-            Skills & Capabilities
+            Skills & Technical Expertise
           </p>
 
           <h2
             id="skills-title"
             className="max-w-4xl text-4xl font-bold leading-tight tracking-[-0.04em] sm:text-5xl lg:text-7xl"
           >
-            Technologies I use to turn
+            Core technical skills
             <br />
-            <span className="text-white/30">ideas into products.</span>
+            <span className="text-white/30">and engineering tools.</span>
           </h2>
 
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-white/50 sm:text-lg">
-            I work across the frontend stack to build responsive,
-            accessible, and interactive digital experiences with a focus on
-            clean architecture and maintainable code.
+            I specialize in building responsive, high-performance web applications using modern React patterns, Next.js, Zustand, TypeScript, and robust QA testing workflows.
           </p>
         </motion.div>
 
@@ -245,7 +219,7 @@ function Skills() {
           className="mt-12 flex items-center gap-4 text-sm text-white/30"
         >
           <span className="h-px w-12 bg-white/10" />
-          Always learning. Always building.
+          Clean architecture. High performance. Continuous learning.
         </motion.div>
       </div>
     </section>

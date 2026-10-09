@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
 import { motion } from "motion/react";
-import { FiMail, FiGithub, FiLinkedin, FiSend, FiCheckCircle } from "react-icons/fi";
+import { FiMail, FiGithub, FiLinkedin, FiSend, FiCheckCircle, FiPhone } from "react-icons/fi";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -92,6 +92,21 @@ function Contact() {
 
             {/* Direct Contacts List */}
             <div className="mt-10 space-y-6">
+              <a
+                href="tel:+2348135144051"
+                className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-5 transition-all duration-300 hover:border-purple-500/50 hover:bg-white/[0.06]"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-purple-300 transition-colors group-hover:bg-purple-500/20">
+                  <FiPhone className="text-xl" />
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-white/40">Phone</p>
+                  <p className="text-sm font-medium text-white group-hover:text-purple-300 sm:text-base">
+                    +2348135144051 | +2347080745485
+                  </p>
+                </div>
+              </a>
+
               <a
                 href="mailto:kingsleydunu@gmail.com"
                 className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-5 transition-all duration-300 hover:border-purple-500/50 hover:bg-white/[0.06]"
