@@ -50,20 +50,15 @@ function About() {
             className="max-w-3xl"
           >
             <p className="text-xl leading-relaxed text-white/70 sm:text-2xl">
-              I am Dunu Ebuka Kingsley, a Frontend Engineer passionate about
-              building modern, interactive and meaningful web applications.
+              I am Ebuka Kingsley, a Frontend Engineer with strong expertise in building scalable, high-performance web applications using React, Next.js, TypeScript, and modern JavaScript (ES6+).
             </p>
 
             <p className="mt-7 text-base leading-relaxed text-white/50 sm:text-lg">
-              I combine clean code, thoughtful design and modern frontend
-              technologies to create digital experiences that are responsive,
-              accessible and enjoyable to use.
+              Experienced in developing responsive e-commerce platforms, integrating secure payment systems (Paystack), and managing complex application state with Zustand.
             </p>
 
             <p className="mt-7 text-base leading-relaxed text-white/50 sm:text-lg">
-              My primary tools include JavaScript, TypeScript, React and
-              modern frontend technologies. I enjoy turning ideas into
-              functional products and continuously improving my craft.
+              Skilled at translating Figma designs into pixel-perfect, production-ready interfaces with clean architecture, comprehensive QA/testing, and optimized performance.
             </p>
           </motion.div>
 
@@ -89,16 +84,16 @@ function About() {
                 Core Stack
               </p>
               <p className="mt-2 text-lg text-white/80">
-                React · TypeScript · JavaScript
+                React · Next.js · TypeScript · Zustand
               </p>
             </div>
 
             <div className="border-b border-white/10 py-5">
               <p className="text-xs uppercase tracking-[0.3em] text-white/30">
-                Focus
+                Location & Availability
               </p>
               <p className="mt-2 text-lg text-white/80">
-                UI · Performance · Accessibility
+                Nigeria · Open to Remote Opportunities
               </p>
             </div>
           </motion.div>

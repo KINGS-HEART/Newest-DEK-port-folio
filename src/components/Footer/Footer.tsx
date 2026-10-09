@@ -100,7 +100,7 @@ function Footer() {
 
         {/* Bottom */}
         <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-white/25 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Dunu Ebuka Kingsley. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Ebuka Kingsley. All rights reserved.</p>
 
           <a
             href="#home"

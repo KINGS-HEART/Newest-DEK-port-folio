@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "motion/react";
-import { FiX, FiFileText, FiDownload, FiCheckCircle } from "react-icons/fi";
+import { FiX, FiFileText, FiDownload, FiCheckCircle, FiPhone, FiMail, FiMapPin, FiBriefcase, FiAward, FiBookOpen } from "react-icons/fi";
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -31,21 +31,33 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.3 }}
-          className="relative max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-3xl border border-white/20 bg-[#0d0d12] p-6 text-white shadow-2xl sm:p-10"
+          className="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-3xl border border-white/20 bg-[#0d0d12] p-6 text-white shadow-2xl sm:p-10"
         >
           {/* Header */}
-          <div className="flex items-center justify-between border-b border-white/10 pb-6">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-purple-500/30 bg-purple-500/10 text-purple-400">
-                <FiFileText className="text-xl" />
+          <div className="flex items-start justify-between border-b border-white/10 pb-6">
+            <div className="flex items-start gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-purple-500/30 bg-purple-500/10 text-purple-400">
+                <FiFileText className="text-2xl" />
               </div>
               <div>
-                <h3 className="text-xl font-bold tracking-tight text-white sm:text-2xl">
-                  DUNU EBUKA KINGSLEY
+                <h3 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                  Ebuka Kingsley
                 </h3>
-                <p className="text-xs font-medium tracking-widest uppercase text-purple-300/70">
-                  Frontend Engineer Resume
+                <p className="mt-1 text-xs font-semibold uppercase tracking-widest text-purple-300">
+                  Frontend Engineer | React | Next.js | TypeScript
                 </p>
+
+                <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-white/60">
+                  <span className="flex items-center gap-1">
+                    <FiMapPin className="text-purple-400" /> Nigeria | Open to Remote Opportunities
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <FiPhone className="text-purple-400" /> +2348135144051 | +2347080745485
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <FiMail className="text-purple-400" /> kingsleydunu@gmail.com
+                  </span>
+                </div>
               </div>
             </div>
 
@@ -53,7 +65,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               type="button"
               onClick={onClose}
               aria-label="Close modal"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70 transition hover:border-white/30 hover:bg-white/10 hover:text-white"
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70 transition hover:border-white/30 hover:bg-white/10 hover:text-white"
             >
               <FiX className="text-xl" />
             </button>
@@ -61,84 +73,121 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
 
           {/* Resume Body */}
           <div className="mt-6 space-y-8 text-sm text-white/80">
-            {/* Summary */}
+            {/* Professional Summary */}
             <section>
-              <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-400">
-                Professional Overview
+              <h4 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-purple-400">
+                <FiBriefcase /> Professional Summary
               </h4>
-              <p className="mt-2 leading-relaxed text-white/70">
-                Frontend Engineer specializing in building responsive, accessible, and interactive web applications using React, Vue, TypeScript, and modern CSS architecture. Passionate about sleek interfaces, performant web applications, and seamless user experiences.
+              <p className="mt-3 leading-relaxed text-white/75">
+                Frontend Engineer with strong expertise in building scalable, high-performance web applications using React, Next.js, TypeScript, and modern JavaScript (ES6+). Experienced in developing responsive e-commerce platforms, integrating secure payment systems (Paystack), and managing complex application state with Zustand. Skilled at translating Figma designs into pixel-perfect, production-ready interfaces with clean architecture and optimized performance. Passionate about building intuitive digital experiences that drive business growth and user engagement.
               </p>
             </section>
 
-            {/* Core Competencies */}
+            {/* Core Technical Skills */}
             <section>
-              <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-400">
-                Technical Stack & Skills
+              <h4 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-purple-400">
+                <FiCheckCircle /> Core Technical Skills
               </h4>
-              <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3">
-                {[
-                  "JavaScript (ES6+)",
-                  "TypeScript",
-                  "React.js & Hooks",
-                  "Vue.js & Pinia",
-                  "Tailwind CSS",
-                  "HTML5 & CSS3",
-                  "RESTful API Integration",
-                  "Git & GitHub Workflow",
-                  "Performance & SEO",
-                  "Three.js & Animations",
-                  "State Management",
-                  "Responsive UI/UX",
-                ].map((skill) => (
-                  <div
-                    key={skill}
-                    className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-white/90"
-                  >
-                    <FiCheckCircle className="shrink-0 text-purple-400" />
-                    <span>{skill}</span>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Experience */}
-            <section>
-              <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-400">
-                Experience Timeline
-              </h4>
-              <div className="mt-3 space-y-4">
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
-                  <div className="flex flex-wrap items-center justify-between gap-2">
-                    <h5 className="font-semibold text-white">Frontend Engineer</h5>
-                    <span className="text-xs text-purple-300/80">2024 — Present</span>
-                  </div>
-                  <p className="mt-1 text-xs leading-relaxed text-white/60">
-                    Designing and implementing responsive user interfaces, optimizing frontend performance, and consuming REST APIs in modern React and Vue projects.
-                  </p>
+                  <span className="text-xs font-semibold text-purple-300">Languages & Frameworks:</span>
+                  <p className="mt-1 text-xs text-white/70">JavaScript (ES6+), TypeScript, HTML5, CSS3, React, Next.js, Bootstrap</p>
                 </div>
 
                 <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
-                  <div className="flex flex-wrap items-center justify-between gap-2">
-                    <h5 className="font-semibold text-white">Frontend Developer</h5>
-                    <span className="text-xs text-purple-300/80">2023 — 2024</span>
-                  </div>
-                  <p className="mt-1 text-xs leading-relaxed text-white/60">
-                    Developed web applications with JavaScript, React, and Tailwind CSS. Built reusable components and integrated payment systems and third-party APIs.
-                  </p>
+                  <span className="text-xs font-semibold text-purple-300">State & Styling:</span>
+                  <p className="mt-1 text-xs text-white/70">Zustand, Responsive Design, CSS Grid, Flexbox, Custom CSS Architecture</p>
+                </div>
+
+                <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
+                  <span className="text-xs font-semibold text-purple-300">Payments & APIs:</span>
+                  <p className="mt-1 text-xs text-white/70">REST API Integration, Paystack Payment Integration, Postman</p>
+                </div>
+
+                <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
+                  <span className="text-xs font-semibold text-purple-300">Tools & Concepts:</span>
+                  <p className="mt-1 text-xs text-white/70">Git, GitHub, Vite, VS Code, Vercel Deployment, Component Architecture, Performance Optimization, DOM Manipulation</p>
+                </div>
+
+                <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-4 sm:col-span-2">
+                  <span className="text-xs font-semibold text-purple-300">QA & Testing:</span>
+                  <p className="mt-1 text-xs text-white/70">Manual Testing, Automated Testing, Functional Testing, Regression Testing, Smoke Testing, Sanity Testing, Cross-Browser Testing, Responsive Testing, UI Testing, User Acceptance Testing (UAT), Test Case Design & Execution, Bug Reporting & Documentation, Playwright, Cypress</p>
                 </div>
               </div>
             </section>
 
-            {/* Education */}
+            {/* Selected Projects */}
             <section>
-              <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-400">
-                Education & Background
+              <h4 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-purple-400">
+                <FiBriefcase /> Selected Projects
               </h4>
-              <div className="mt-2 rounded-2xl border border-white/10 bg-white/[0.02] p-4">
-                <h5 className="font-semibold text-white">Physics Electronics</h5>
-                <p className="mt-1 text-xs text-white/60">
-                  Analytical mindset and electronic systems training transitioned into professional software development and engineering.
+              <div className="mt-4 space-y-4">
+                <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
+                  <h5 className="font-semibold text-white">QuickServe E-Commerce Platform</h5>
+                  <p className="mt-1 text-xs leading-relaxed text-white/70">
+                    Engineered a fully functional e-commerce storefront with dynamic product rendering and cart state management. Integrated secure Paystack payment processing. Implemented persistent cart logic and optimized checkout flow to enhance user experience. Deployed to production using Vercel.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
+                  <h5 className="font-semibold text-white">Responsive Multi-Page Web Application</h5>
+                  <p className="mt-1 text-xs leading-relaxed text-white/70">
+                    Built a 3-page responsive platform (Landing Page, Registration System, Admin Dashboard). Implemented designs from Figma with pixel-perfect accuracy. Ensured cross-browser compatibility and accessibility best practices.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
+                  <h5 className="font-semibold text-white">Markdown Preview App (React)</h5>
+                  <p className="mt-1 text-xs leading-relaxed text-white/70">
+                    Developed an interactive Markdown editor with real-time preview rendering. Applied reusable component-based architecture for scalability.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
+                  <h5 className="font-semibold text-white">Authentication & Sign-Up Interface</h5>
+                  <p className="mt-1 text-xs leading-relaxed text-white/70">
+                    Designed structured sign-up forms with validation logic. Built reusable UI components for maintainability and consistency.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Education & Certification */}
+            <section>
+              <h4 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-purple-400">
+                <FiBookOpen /> Education & Certification
+              </h4>
+              <div className="mt-4 space-y-3">
+                <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <h5 className="font-semibold text-white">AltSchool Africa</h5>
+                    <span className="text-xs text-purple-300">School of Engineering</span>
+                  </div>
+                  <p className="mt-1 text-xs text-white/80 font-medium">Diploma in Frontend Engineering</p>
+                  <p className="mt-1 text-xs leading-relaxed text-white/60">
+                    Intensive training in modern JavaScript, React, web architecture, and version control. Built and deployed real-world projects following industry best practices. Collaborated in team-based software development environments.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
+                  <div className="flex items-center gap-2 text-xs font-semibold text-white">
+                    <FiAward className="text-purple-400" /> Frontend Engineering Certificate (Program Completion) — AltSchool Africa
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Professional Development & Additional Strengths */}
+            <section>
+              <h4 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-purple-400">
+                Professional Development & Strengths
+              </h4>
+              <div className="mt-3 rounded-2xl border border-white/10 bg-white/[0.02] p-4 space-y-3">
+                <p className="text-xs leading-relaxed text-white/70">
+                  <strong className="text-white">Professional Development:</strong> Continuously advancing expertise in scalable frontend systems, modern React patterns, performance optimization, and enterprise-level architecture. Committed to continuous learning and delivering high-impact digital solutions.
+                </p>
+                <p className="text-xs leading-relaxed text-white/70">
+                  <strong className="text-white">Additional Strengths:</strong> Strong communicator with growing confidence in technical discussions and presentations. Strategic thinker with hands-on problem-solving ability. Highly adaptable, fast learner, and team-oriented professional.
                 </p>
               </div>
             </section>

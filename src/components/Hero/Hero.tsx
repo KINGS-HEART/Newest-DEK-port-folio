@@ -78,7 +78,7 @@ function Hero() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="mb-5 text-sm font-medium uppercase tracking-[0.4em] text-purple-300/80"
         >
-          Frontend Engineer
+          Frontend Engineer | React | Next.js | TypeScript
         </motion.p>
 
         {/* Name */}
@@ -93,8 +93,6 @@ function Hero() {
           }}
           className="max-w-5xl text-[clamp(3.5rem,10vw,9rem)] font-bold leading-[0.85] tracking-[-0.06em]"
         >
-          DUNU
-          <br />
           EBUKA
           <br />
           <span className="text-white/30">KINGSLEY</span>
@@ -110,9 +108,7 @@ function Hero() {
           }}
           className="mt-10 max-w-2xl text-base leading-relaxed text-white/60 sm:text-lg"
         >
-          I design and build modern digital experiences that combine
-          thoughtful interfaces, smooth interactions and scalable frontend
-          architecture using JavaScript, TypeScript, React and Vue.
+          Frontend Engineer building scalable, high-performance web applications with React, Next.js, TypeScript, and Zustand. Experienced in e-commerce platforms, Paystack integration, and translating Figma designs into production-ready interfaces.
         </motion.p>
 
         {/* Buttons */}

@@ -21,119 +21,103 @@ function Projects() {
   const projects: Project[] = [
     {
       number: "01",
-      title: "QuickServe Web App",
+      title: "QuickServe E-Commerce Platform",
       description:
-        "A modern service-based web application designed to provide fast and seamless user interactions.",
+        "Engineered a fully functional e-commerce storefront with dynamic product rendering and cart state management.",
       longDescription:
-        "QuickServe is a high-performance service booking platform engineered with Vue 3 and Pinia state management. Features responsive navigation, seamless checkout, and Paystack integration.",
-      tech: ["Vue.js", "TypeScript", "Pinia", "Vue Router", "Paystack"],
+        "Integrated secure Paystack payment processing. Implemented persistent cart logic and optimized checkout flow to enhance user experience. Deployed to production using Vercel.",
+      tech: ["React", "Next.js", "TypeScript", "Zustand", "Paystack"],
       link: "https://quickserve-wzr9.vercel.app/",
-      category: "Vue",
+      category: "React",
       highlights: [
-        "Architected with modular Vue components & TypeScript interfaces",
-        "Integrated Paystack payment gateway for real-time transactions",
-        "Centralized global state with Pinia",
+        "Architected modular React components with Zustand global state",
+        "Integrated secure Paystack payment gateway for checkout processing",
+        "Implemented persistent cart logic and optimized performance",
       ],
     },
     {
       number: "02",
-      title: "Expense Tracker",
+      title: "Responsive Multi-Page Web Application",
       description:
-        "A web application for tracking expenses and managing personal finances.",
+        "Built a 3-page responsive platform featuring Landing Page, Registration System, and Admin Dashboard.",
       longDescription:
-        "An intuitive financial dashboard built with React and Tailwind CSS. Allows users to record, categorize, filter, and visualize daily income and expenses.",
-      tech: ["React", "TypeScript", "Tailwind CSS"],
-      link: "https://expence-traker-app-rust.vercel.app/",
+        "Implemented designs from Figma with pixel-perfect accuracy. Ensured cross-browser compatibility and web accessibility best practices.",
+      tech: ["React", "TypeScript", "CSS Grid", "Flexbox", "Figma"],
+      link: "https://quickserve-wzr9.vercel.app/",
       category: "React",
       highlights: [
-        "Real-time expense arithmetic and categorization",
-        "Persistent local data storage & instant state updates",
-        "Responsive financial summary cards",
+        "Pixel-perfect translation from Figma design system",
+        "Comprehensive cross-browser testing & responsive layouts",
+        "Accessible forms and structured dashboard user flows",
       ],
     },
     {
       number: "03",
-      title: "Markdown Preview App",
+      title: "Markdown Preview App (React)",
       description:
-        "A real-time Markdown editor allowing users to write Markdown and see the formatted result instantly.",
+        "Developed an interactive Markdown editor with real-time preview rendering.",
       longDescription:
-        "A developer utility tool allowing real-time side-by-side Markdown editing and dynamic HTML preview rendering.",
-      tech: ["Vue.js", "TypeScript", "Vite", "CSS3"],
+        "Applied reusable component-based architecture for scalability, allowing side-by-side editing and formatted HTML preview.",
+      tech: ["React", "TypeScript", "Vite", "CSS3"],
       link: "https://markdown-vue-js-ts-assessment-8fef.vercel.app/",
-      category: "Vue",
+      category: "React",
       highlights: [
-        "Instant two-way binding and live Markdown parsing",
-        "Clean side-by-side split screen view for desktop & mobile",
-        "Export and copy formatted content",
+        "Real-time Markdown parsing with split view rendering",
+        "Reusable component architecture for maintainability",
+        "Export and formatted text copy functionality",
       ],
     },
     {
       number: "04",
+      title: "Authentication & Sign-Up Interface",
+      description:
+        "Designed structured sign-up forms with validation logic and reusable UI components.",
+      longDescription:
+        "Built reusable UI components for maintainability, consistency, and seamless user authentication flows.",
+      tech: ["React", "TypeScript", "Tailwind CSS", "Zustand"],
+      link: "https://to-do-app-livid-eta.vercel.app/",
+      category: "React",
+      highlights: [
+        "Structured sign-up form with instant field validation",
+        "Reusable form input components and accessible error states",
+        "Seamless integration with state management handlers",
+      ],
+    },
+    {
+      number: "05",
+      title: "Expense Tracker Dashboard",
+      description:
+        "Web application for tracking daily expenses, categorized income, and personal finance management.",
+      longDescription:
+        "An intuitive financial dashboard built with React and Tailwind CSS allowing users to record, filter, and visualize expenses.",
+      tech: ["React", "TypeScript", "Tailwind CSS"],
+      link: "https://expence-traker-app-rust.vercel.app/",
+      category: "React",
+      highlights: [
+        "Real-time expense calculations & category filtering",
+        "Persistent local data storage",
+        "Responsive financial summary cards",
+      ],
+    },
+    {
+      number: "06",
       title: "E-Commerce Wine Store",
       description:
-        "A modern e-commerce interface for browsing and purchasing wine products.",
+        "Modern e-commerce interface for browsing wine products with REST API integration.",
       longDescription:
-        "A feature-rich e-commerce store front showcasing product catalogs, dynamic filtering, shopping cart functionality, and REST API integration.",
+        "A feature-rich e-commerce store front showcasing product catalogs, dynamic filtering, shopping cart functionality, and REST API calls.",
       tech: ["JavaScript", "HTML5", "CSS3", "REST APIs"],
       link: "https://e-commerce-on-wines.vercel.app/",
       category: "JavaScript",
       highlights: [
         "Dynamic REST API product catalog fetching",
-        "Interactive shopping cart with item quantity controls",
-        "Custom CSS animations and responsive layout grid",
-      ],
-    },
-    {
-      number: "05",
-      title: "To-Do App",
-      description:
-        "A simple and responsive task management application for organizing daily activities.",
-      longDescription:
-        "A task management web app with status filtering (all, active, completed), drag-and-drop support, and theme options.",
-      tech: ["React", "TypeScript", "CSS"],
-      link: "https://to-do-app-livid-eta.vercel.app/",
-      category: "React",
-      highlights: [
-        "Filter tasks by status and priority",
-        "Clean, minimal interface with accessibility in mind",
-        "Full keyboard accessibility and local persistence",
-      ],
-    },
-    {
-      number: "06",
-      title: "Weather App",
-      description:
-        "A responsive weather application that presents weather information in a clean interface.",
-      longDescription:
-        "An interactive weather forecast app providing real-time weather metrics, location search, temperature conversions, and atmospheric details.",
-      tech: ["React", "TypeScript", "CSS", "Weather API"],
-      link: "https://weather-app-project-eight-vert.vercel.app/",
-      category: "React",
-      highlights: [
-        "Real-time location weather API integration",
-        "Detailed humidity, wind speed, and daily forecast stats",
-        "Adaptive UI styling based on current weather conditions",
-      ],
-    },
-    {
-      number: "07",
-      title: "Blog Web Application",
-      description:
-        "A modern blog platform with structured content layout, responsive design, and clean user interface.",
-      longDescription:
-        "A content platform built to display technical articles and dev logs with reading time estimates, category filters, and clean typography.",
-      tech: ["HTML5", "CSS3", "JavaScript"],
-      link: "https://blog-app-beta-peach.vercel.app/",
-      category: "JavaScript",
-      highlights: [
-        "Clean typographic hierarchy and layout design",
-        "Optimized mobile navigation and article browsing",
-        "Fast page load performance and zero external bundle bloat",
+        "Interactive shopping cart with quantity controls",
+        "Custom CSS animations and responsive grid layout",
       ],
     },
   ];
 
-  const categories = ["All", "React", "Vue", "JavaScript"];
+  const categories = ["All", "React", "JavaScript"];
 
   const filteredProjects = projects.filter((project) => {
     const matchesCategory =

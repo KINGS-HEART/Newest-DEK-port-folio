@@ -6,19 +6,19 @@ function Experience() {
       period: "2024 — Present",
       role: "Frontend Engineer",
       description:
-        "Building responsive and interactive web applications using modern frontend technologies.",
+        "Engineering scalable, high-performance web applications using React, Next.js, TypeScript, and Zustand. Developing responsive e-commerce platforms, integrating secure Paystack payment workflows, and translating Figma designs into pixel-perfect, production-ready interfaces with clean architecture.",
     },
     {
       period: "2023 — 2024",
-      role: "Frontend Developer",
+      role: "Frontend Developer & QA Tester",
       description:
-        "Developed web interfaces with JavaScript, React and modern CSS technologies.",
+        "Built interactive web applications with React, TypeScript, and modern CSS architecture. Designed reusable UI components, integrated REST APIs, and performed automated & manual QA testing (Playwright, Cypress, UAT, cross-browser testing).",
     },
     {
-      period: "2022 — 2023",
-      role: "Frontend Engineering Student",
+      period: "AltSchool Africa",
+      role: "Diploma in Frontend Engineering",
       description:
-        "Focused on JavaScript, TypeScript, React, web development fundamentals and software engineering practices.",
+        "Completed intensive School of Engineering diploma training in modern JavaScript (ES6+), React, web architecture, and version control. Built and deployed real-world projects following industry best practices in team software development environments.",
     },
   ];
 
