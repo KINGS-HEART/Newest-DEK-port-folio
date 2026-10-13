@@ -9,7 +9,7 @@ interface Project {
   longDescription?: string;
   tech: string[];
   link: string;
-  category: "React" | "Vue" | "JavaScript";
+  category: "React" | "Vue" | "JavaScript" | "Certificate";
   highlights?: string[];
 }
 
@@ -115,9 +115,25 @@ function Projects() {
         "Custom CSS animations and responsive grid layout",
       ],
     },
+    {
+      number: "07",
+      title: "Student Portfolio & Certification",
+      description:
+        "AltSchool Africa Frontend Engineering Portfolio showcasing diploma coursework, projects, and certification.",
+      longDescription:
+        "Comprehensive student portfolio and project showcase developed as part of AltSchool Africa's Diploma in Frontend Engineering program, detailing projects, skills, and certification achievements.",
+      tech: ["HTML5", "CSS3", "JavaScript", "AltSchool Certificate"],
+      link: "https://kings-heart.github.io/student-portfolio/projects.html",
+      category: "Certificate",
+      highlights: [
+        "Official AltSchool Africa Frontend Engineering certification showcase",
+        "Interactive multi-project portfolio gallery with responsive UI",
+        "Hosted live on GitHub Pages",
+      ],
+    },
   ];
 
-  const categories = ["All", "React", "JavaScript"];
+  const categories = ["All", "React", "JavaScript", "Certificate"];
 
   const filteredProjects = projects.filter((project) => {
     const matchesCategory =
