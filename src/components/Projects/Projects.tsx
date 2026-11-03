@@ -123,12 +123,12 @@ function Projects() {
       longDescription:
         "Comprehensive student portfolio and project showcase developed as part of AltSchool Africa's Diploma in Frontend Engineering program, detailing projects, skills, and certification achievements.",
       tech: ["HTML5", "CSS3", "JavaScript", "AltSchool Certificate"],
-      link: "https://kings-heart.github.io/student-portfolio/projects.html",
+      link: "https://student-portfolio-omega-five.vercel.app/index.html",
       category: "Certificate",
       highlights: [
         "Official AltSchool Africa Frontend Engineering certification showcase",
         "Interactive multi-project portfolio gallery with responsive UI",
-        "Hosted live on GitHub Pages",
+        "Hosted live on Vercel",
       ],
     },
   ];
