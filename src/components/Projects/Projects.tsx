@@ -107,7 +107,7 @@ function Projects() {
       longDescription:
         "A feature-rich e-commerce store front showcasing product catalogs, dynamic filtering, shopping cart functionality, and REST API calls.",
       tech: ["JavaScript", "HTML5", "CSS3", "REST APIs"],
-      link: "https://e-commerce-on-wines.vercel.app/",
+      link: "https://019f3d38-985c-7685-8919-a41cc4c6ce6e.arena.site/",
       category: "JavaScript",
       highlights: [
         "Dynamic REST API product catalog fetching",

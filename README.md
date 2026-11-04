@@ -99,7 +99,7 @@ An e-commerce application focused on presenting wine products through a responsi
 
 **Technologies:** JavaScript, HTML, CSS, REST APIs
 
-**Live:** https://e-commerce-on-wines.vercel.app/
+**Live:** https://019f3d38-985c-7685-8919-a41cc4c6ce6e.arena.site/
 
 ---
 
