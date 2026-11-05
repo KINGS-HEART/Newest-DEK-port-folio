@@ -69,18 +69,18 @@ function Projects() {
     },
     {
       number: "04",
-      title: "Authentication & Sign-Up Interface",
+      title: "TO-DO LIST APP",
       description:
-        "Designed structured sign-up forms with validation logic and reusable UI components.",
+        "Engineered an interactive task management web application for creating, tracking, and organizing daily tasks.",
       longDescription:
-        "Built reusable UI components for maintainability, consistency, and seamless user authentication flows.",
+        "A streamlined To-Do list application built with React and TypeScript. Features intuitive task creation, status toggling, deletion, and local state management for efficient daily productivity.",
       tech: ["React", "TypeScript", "Tailwind CSS", "Zustand"],
       link: "https://to-do-app-livid-eta.vercel.app/",
       category: "React",
       highlights: [
-        "Structured sign-up form with instant field validation",
-        "Reusable form input components and accessible error states",
-        "Seamless integration with state management handlers",
+        "Real-time task addition, completion toggling, and removal",
+        "Modular component architecture with responsive layout design",
+        "Efficient state handling and persistent task workflows",
       ],
     },
     {

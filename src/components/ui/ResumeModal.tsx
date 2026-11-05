@@ -144,9 +144,9 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                 </div>
 
                 <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
-                  <h5 className="font-semibold text-white">Authentication & Sign-Up Interface</h5>
+                  <h5 className="font-semibold text-white">TO-DO LIST APP</h5>
                   <p className="mt-1 text-xs leading-relaxed text-white/70">
-                    Designed structured sign-up forms with validation logic. Built reusable UI components for maintainability and consistency.
+                    Built a responsive task management application for creating, tracking, and organizing daily tasks with real-time state management and clean UI architecture.
                   </p>
                 </div>
               </div>
