@@ -37,13 +37,13 @@ function Projects() {
     },
     {
       number: "02",
-      title: "Responsive Multi-Page Web Application",
+      title: "Weather App",
       description:
         "Built a 3-page responsive platform featuring Landing Page, Registration System, and Admin Dashboard.",
       longDescription:
         "Implemented designs from Figma with pixel-perfect accuracy. Ensured cross-browser compatibility and web accessibility best practices.",
       tech: ["React", "TypeScript", "CSS Grid", "Flexbox", "Figma"],
-      link: "https://quickserve-wzr9.vercel.app/",
+      link: "https://weather-app-project-eight-vert.vercel.app/",
       category: "React",
       highlights: [
         "Pixel-perfect translation from Figma design system",
