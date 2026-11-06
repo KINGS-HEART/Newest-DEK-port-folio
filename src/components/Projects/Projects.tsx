@@ -43,7 +43,7 @@ function Projects() {
       longDescription:
         "Implemented designs from Figma with pixel-perfect accuracy. Ensured cross-browser compatibility and web accessibility best practices.",
       tech: ["React", "TypeScript", "CSS Grid", "Flexbox", "Figma"],
-      link: "https://quickserve-wzr9.vercel.app/",
+      link: "https://weather-app-project-eight-vert.vercel.app/",
       category: "React",
       highlights: [
         "Pixel-perfect translation from Figma design system",
