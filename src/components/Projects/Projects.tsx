@@ -37,7 +37,7 @@ function Projects() {
     },
     {
       number: "02",
-      title: "Responsive Multi-Page Web Application",
+      title: "Weather App",
       description:
         "Built a 3-page responsive platform featuring Landing Page, Registration System, and Admin Dashboard.",
       longDescription:

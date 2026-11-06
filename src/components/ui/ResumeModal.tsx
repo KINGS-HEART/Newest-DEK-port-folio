@@ -130,7 +130,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                 </div>
 
                 <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
-                  <h5 className="font-semibold text-white">Responsive Multi-Page Web Application</h5>
+                  <h5 className="font-semibold text-white">Weather App</h5>
                   <p className="mt-1 text-xs leading-relaxed text-white/70">
                     Built a 3-page responsive platform (Landing Page, Registration System, Admin Dashboard). Implemented designs from Figma with pixel-perfect accuracy. Ensured cross-browser compatibility and accessibility best practices.
                   </p>
